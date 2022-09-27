@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <title>Interview Classes-REACT-Day1</title>
+    <style>
+        body{
+            background-color: lightcyan;
+            color: black;
+            font-family: 'Abel', sans-serif;
+            font-weight: lighter;
+        }
+        #one{
+            color: red;
+            font-size: 1.2rem;
+        }
+        pre{
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interview Classes-REACT-Day1</h1><hr>
+    <h2>Q1. 1. What is Virtual DOM?</h2>
+    <h2>Ans- Virtual DOM is the in-memory representation of Real DOM.React keeps a lightweight representation of the real DOM in the memory, and that is known as the virtual DOM. When the state of an object changes, virtual DOM changes only that object in the real DOM, rather than updating all the objects.</h2><hr>
+    <h2>Q2.  What is SPA?</h2>
+    <h2>SPA stands for Single Page Application. It is a very common way of programming websites these days. The idea is that the website loads all the HTML/JS the first time you visit. When you then navigate, the browser will only rerender the content without refreshing the website.</h2>
+    <h2>This is used to make the user experience feel a lot smoother. You can tell when it’s a SPA or multi-page application when navigating between menus often because a multi-page application will reload, making the whole UI blink fast depending on the content. This is due to it refreshing the website. A SPA will instead feel smooth in the transaction as it simply shows other content without refreshing.</h2><hr>
+    <h2>Q3. What is difference between Functional and Class component?</h2>
+    <h2> Functional Component-</h2>
+    <h2><ol><li>Stateless Functional Component</li>
+    <li>JS functions</li>
+    <li><pre id="one">
+        function Welcome(props) {
+            return <p>Hello, {props.name}</p>
+       }
+    </pre></li></ol></h2>
+    <h2>Class Component-</h2>
+    <h2><ol><li>Stateful Class Components</li>
+    <li>Class extending component class</li>
+    <li>render method returning HTML</li>
+    <li><pre id="one">
+        class Welcome extends React.Component {
+            render() {
+                return (
+                    <p>Hello, {this.props.name}</p>
+                )
+           }
+          }
+    </pre></li></ol></h2>
+    <pre>
+        Functional Components:
+
+        1. Simple functions receiving props and returning a declaration (we should try to use functional component as mucha s possible)
+           | ADVANTAGES OF FUNCTIONS OVER CLASS |
+        2. Absence of "this" keyword
+        3. Solutions are possible without using states
+        4. maintenance of debugging becomes easy
+        5. without complicated logic and are mainly responsible for the UI(user interface)
+        6. other names- Stateless | Dumb | Presentational components (before 2018)
+    </pre>
+    <pre>
+        Class Components:
+
+        1. More feature rich
+        2. Maintain their own private data-state
+        3. Complex UI logic
+        4. Provide lifecycle hooks
+        5. other names - Stateful | Smart | Container
+    </pre><hr>
+    <h2>Q4. What does mean by state and its use in react?</h2>
+    <h2>States are the heart of React components. States are the source of data and must be kept as simple as possible. Basically, states are the objects which determine components rendering and behavior. They are mutable unlike the props and create dynamic and interactive components. They are accessed via this.state().</h2>
+    <h2><ul>
+        <li>The state is a built-in React object that is used to contain data or information about the component. The state in a component can change over time, and whenever it changes, the component re-renders.</li>
+        <li>The change in state can happen as a response to user action or system-generated events. It determines the behavior of the component and how it will render.</li>
+        <li>We can update the state of a component by using the built-in ‘setState()’ method:</li>
+    </ul></h2><hr>
+    <h2>Q5. What is package.json ?</h2>
+    <h2>Ans- {}package.json is a kind of manifest file for your application. This file plays a very important role in the react application development and deployment.</h2>
+    <pre id="one">Package.json = Metadata associated with project + All Dependencies with version + scripts</pre>
+    <h2>In the react project you can see the package.json file in the react project structure, double click on the package. json file and see the code.</h2>
+    <script src="index.js"></script>
+</body>
+</html>
